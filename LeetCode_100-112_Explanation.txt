@@ -1,0 +1,53 @@
+LeetCode Problems 100–112 — Solutions Explanation
+Language: C++17
+Included: 100, 101, 104, 106, 107, 108, 110, 111, 112
+
+100. Same Tree
+I used recursion to compare two binary trees. If both nodes are empty, they are equal. If only one is empty, they are different. Otherwise, I compare their values and recursively check the left and right children.
+Time Complexity: O(n), where n is the number of nodes examined across the trees.
+Space Complexity: O(h) for recursion, where h is the maximum tree height.
+
+101. Symmetric Tree
+I used recursion to check whether the left and right subtrees are mirror images. The values must match, and each left child must match the opposite right child.
+Time Complexity: O(n).
+Space Complexity: O(h).
+
+104. Maximum Depth of Binary Tree
+I used recursion to find the maximum depth. For an empty tree, the depth is zero. Otherwise, I add one to the larger depth of the left and right subtrees.
+Time Complexity: O(n).
+Space Complexity: O(h).
+
+106. Construct Binary Tree from Inorder and Postorder Traversal
+I used the last value of postorder as the root. I found that value in inorder using a hash map. Then I divided the traversal arrays into left and right subtree ranges and built both parts recursively.
+Time Complexity: O(n).
+Space Complexity: O(n) for the hash map and recursion.
+
+107. Binary Tree Level Order Traversal II
+I used a queue to visit the tree level by level. I stored each level in a separate vector. At the end, I reversed the order of levels to show them from bottom to top.
+Time Complexity: O(n).
+Space Complexity: O(n).
+
+108. Convert Sorted Array to Binary Search Tree
+I selected the middle element of the sorted array as the root. Then I recursively built the left and right subtrees from the two halves. This keeps the tree height-balanced.
+Time Complexity: O(n).
+Space Complexity: O(log n) recursion space, excluding the created tree.
+
+110. Balanced Binary Tree
+I used recursion to calculate subtree heights. If the height difference between the left and right subtrees is greater than one, the tree is not balanced. I returned -1 to stop when an unbalanced subtree was found.
+Time Complexity: O(n).
+Space Complexity: O(h).
+
+111. Minimum Depth of Binary Tree
+I used recursion to find the shortest path from the root to a leaf. If a node has only one child, I follow that child because a missing child is not a leaf path.
+Time Complexity: O(n).
+Space Complexity: O(h).
+
+112. Path Sum
+I used recursion to check whether a root-to-leaf path has the required sum. At each node, I subtract its value from the target. At a leaf, I check whether its value equals the remaining target.
+Time Complexity: O(n).
+Space Complexity: O(h).
+
+Conclusion
+These problems helped me practice recursion, binary trees, breadth-first search, depth-first search, hash maps, and tree construction. I learned how to compare trees, calculate their depth, check balance, and build binary search trees.
+
+Submission note: Take genuine screenshots of each Accepted submission in LeetCode. This document does not claim that the code was submitted or accepted.
